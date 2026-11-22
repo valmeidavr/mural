@@ -24,4 +24,9 @@ export const noticias = [
     data: "2026-11-22",
     texto: "A reforma da praça central começa em dezembro e dura três meses.",
   },
+  {
+    titulo: "Horta comunitária da Vila Verde abre neste sábado",
+    data: "2026-11-22",
+    texto: "A horta comunitária da Vila Verde abre neste sábado, às 8h, na praça do bairro.",
+  },
 ];
