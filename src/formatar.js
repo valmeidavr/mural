@@ -20,6 +20,18 @@ export function slugify(titulo) {
     .replace(/^-+|-+$/g, "");
 }
 
+/** Minúsculas e sem acentos, pra comparar textos: "Ciências" -> "ciencias". */
+function normalizar(texto) {
+  return texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+}
+
+/** Devolve as notícias cujo título contém o termo (ignora maiúsculas e acentos). */
+export function filtrarPorTitulo(noticias, termo) {
+  const busca = normalizar(termo.trim());
+  if (!busca) return noticias;
+  return noticias.filter((n) => normalizar(n.titulo).includes(busca));
+}
+
 /** Estima os minutos de leitura (200 palavras por minuto, no mínimo 1). */
 export function tempoDeLeitura(texto, palavrasPorMinuto = 200) {
   const palavras = texto.trim().split(/\s+/).filter(Boolean).length;

@@ -1,6 +1,27 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { formatarData, resumo, slugify, tempoDeLeitura } from "./formatar.js";
+import { filtrarPorTitulo, formatarData, resumo, slugify, tempoDeLeitura } from "./formatar.js";
+
+const exemplos = [
+  { titulo: "Prefeitura anuncia nova ciclovia no centro" },
+  { titulo: "Feira de ciências reúne mil estudantes" },
+  { titulo: "Biblioteca amplia o horário de atendimento" },
+];
+
+test("filtrarPorTitulo com termo vazio devolve tudo", () => {
+  assert.equal(filtrarPorTitulo(exemplos, "").length, 3);
+  assert.equal(filtrarPorTitulo(exemplos, "   ").length, 3);
+});
+
+test("filtrarPorTitulo ignora maiúsculas e acentos", () => {
+  assert.deepEqual(filtrarPorTitulo(exemplos, "CICLOVIA"), [exemplos[0]]);
+  assert.deepEqual(filtrarPorTitulo(exemplos, "ciencias"), [exemplos[1]]);
+  assert.deepEqual(filtrarPorTitulo(exemplos, "HORÁRIO"), [exemplos[2]]);
+});
+
+test("filtrarPorTitulo sem resultado devolve lista vazia", () => {
+  assert.deepEqual(filtrarPorTitulo(exemplos, "futebol"), []);
+});
 
 test("formatarData troca a ordem e usa barras", () => {
   assert.equal(formatarData("2026-03-05"), "05/03/2026");
