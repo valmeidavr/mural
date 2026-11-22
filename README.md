@@ -15,3 +15,7 @@ O `.claude/hooks/registrar.mjs` anota no `.claude/hooks.log` cada arquivo que o 
 ## Sobre
 
 Repositório de treino do curso Claude Code na Prática.
+
+## Como contribuir
+
+Rode `npm test` antes de cada commit.
