@@ -38,12 +38,12 @@ test("resumo não passa do limite", () => {
   assert.ok(resumo("um texto bem comprido", 10).length <= 10);
 });
 
-test("slugify tira acentos e espaços", () => {
-  assert.equal(slugify("Feira de Ciências"), "feira-de-ciencias");
+test("deve tirar acentos e trocar espaços por underline no slugify", () => {
+  assert.equal(slugify("Feira de Ciências"), "feira_de_ciencias");
 });
 
 test("deve remover a pontuação no slugify", () => {
-  assert.equal(slugify("Olá, mundo! 100%"), "ola-mundo-100");
+  assert.equal(slugify("Olá, mundo! 100%"), "ola_mundo_100");
 });
 
 test("tempoDeLeitura arredonda pra cima e tem mínimo de 1 minuto", () => {

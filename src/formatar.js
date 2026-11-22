@@ -10,14 +10,14 @@ export function resumo(texto, max) {
   return texto.slice(0, max - 1).trimEnd() + "…";
 }
 
-/** Vira um endereço amigável: "Feira de Ciências" -> "feira-de-ciencias". */
+/** Vira um endereço amigável: "Feira de Ciências" -> "feira_de_ciencias". */
 export function slugify(titulo) {
   return titulo
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
 }
 
 /** Minúsculas e sem acentos, pra comparar textos: "Ciências" -> "ciencias". */
