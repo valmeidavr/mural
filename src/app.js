@@ -1,10 +1,12 @@
 import { noticias } from "./noticias.js";
-import { filtrarPorTitulo, formatarData, resumo, tempoDeLeitura } from "./formatar.js";
+import { filtrarPorTitulo, formatarData, resumo, tempoDeLeitura, textoContagem } from "./formatar.js";
 
 const lista = document.querySelector("#lista");
 const busca = document.querySelector("#busca");
+const contagem = document.querySelector("#contagem");
 
 function renderizar(itens) {
+  contagem.textContent = textoContagem(itens.length);
   lista.replaceChildren();
 
   if (itens.length === 0) {

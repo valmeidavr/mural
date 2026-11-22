@@ -32,6 +32,11 @@ export function filtrarPorTitulo(noticias, termo) {
   return noticias.filter((n) => normalizar(n.titulo).includes(busca));
 }
 
+/** Texto da contagem: 1 -> "1 notícia", 4 -> "4 notícias", 0 -> "0 notícias". */
+export function textoContagem(quantidade) {
+  return `${quantidade} ${quantidade === 1 ? "notícia" : "notícias"}`;
+}
+
 /** Estima os minutos de leitura (200 palavras por minuto, no mínimo 1). */
 export function tempoDeLeitura(texto, palavrasPorMinuto = 200) {
   const palavras = texto.trim().split(/\s+/).filter(Boolean).length;

@@ -11,12 +11,14 @@
       article h2 { margin: 0 0 0.25rem; font-size: 1.15rem; }
       time { color: #666; font-size: 0.85rem; }
       #busca { width: 100%; box-sizing: border-box; padding: 0.5rem 0.75rem; font: inherit; border: 1px solid #ccc; border-radius: 6px; }
+      #contagem { color: #666; font-size: 0.85rem; margin: 0.5rem 0 0; }
       .vazio { color: #666; padding: 1rem 0; }
     </style>
   </head>
   <body>
     <h1>Mural</h1>
     <input type="search" id="busca" placeholder="Buscar pelo título…" aria-label="Buscar notícias pelo título" />
+    <p id="contagem" aria-live="polite"></p>
     <main id="lista"></main>
     <script type="module" src="/src/app.js"></script>
   </body>

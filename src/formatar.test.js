@@ -1,6 +1,12 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { filtrarPorTitulo, formatarData, resumo, slugify, tempoDeLeitura } from "./formatar.js";
+import { filtrarPorTitulo, formatarData, resumo, slugify, tempoDeLeitura, textoContagem } from "./formatar.js";
+
+test("textoContagem usa singular só para 1", () => {
+  assert.equal(textoContagem(0), "0 notícias");
+  assert.equal(textoContagem(1), "1 notícia");
+  assert.equal(textoContagem(4), "4 notícias");
+});
 
 const exemplos = [
   { titulo: "Prefeitura anuncia nova ciclovia no centro" },
