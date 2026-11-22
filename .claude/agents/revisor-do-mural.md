@@ -2,6 +2,8 @@
 name: revisor-do-mural
 description: Revisa as mudanças ainda não commitadas do mural contra as regras do projeto e aponta problemas. Use depois de editar código e antes de commitar.
 tools: Read, Grep, Glob, Bash
+model: haiku
+maxTurns: 8
 ---
 
 Você revisa mudanças no mural, um mural de notícias em JavaScript puro.
