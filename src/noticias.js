@@ -19,4 +19,9 @@ export const noticias = [
     data: "2026-11-22",
     texto: "A partir de segunda-feira (23), os postos de saúde aplicam doses gratuitas das 8h às 17h. É preciso levar documento com foto e a carteira de vacinação.",
   },
+  {
+    titulo: "Reforma da praça central começa em dezembro",
+    data: "2026-11-22",
+    texto: "A reforma da praça central começa em dezembro e dura três meses.",
+  },
 ];
