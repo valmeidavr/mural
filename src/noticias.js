@@ -14,4 +14,9 @@ export const noticias = [
     data: "2026-04-02",
     texto: "A partir da próxima semana, a biblioteca central passa a abrir também aos sábados, das 9h às 15h.",
   },
+  {
+    titulo: "Campanha de vacinação começa na segunda-feira",
+    data: "2026-11-22",
+    texto: "A partir de segunda-feira (23), os postos de saúde aplicam doses gratuitas das 8h às 17h. É preciso levar documento com foto e a carteira de vacinação.",
+  },
 ];
