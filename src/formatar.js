@@ -19,3 +19,9 @@ export function slugify(titulo) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+/** Estima os minutos de leitura (200 palavras por minuto, no mínimo 1). */
+export function tempoDeLeitura(texto, palavrasPorMinuto = 200) {
+  const palavras = texto.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(palavras / palavrasPorMinuto));
+}
