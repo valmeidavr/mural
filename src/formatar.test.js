@@ -42,6 +42,10 @@ test("slugify tira acentos e espaços", () => {
   assert.equal(slugify("Feira de Ciências"), "feira-de-ciencias");
 });
 
+test("deve remover a pontuação no slugify", () => {
+  assert.equal(slugify("Olá, mundo! 100%"), "ola-mundo-100");
+});
+
 test("tempoDeLeitura arredonda pra cima e tem mínimo de 1 minuto", () => {
   assert.equal(tempoDeLeitura(""), 1);
   assert.equal(tempoDeLeitura("poucas palavras aqui"), 1);
