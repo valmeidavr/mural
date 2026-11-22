@@ -11,3 +11,7 @@ npm test     # roda os testes
 ## Hooks
 
 O `.claude/hooks/registrar.mjs` anota no `.claude/hooks.log` cada arquivo que o Claude edita.
+
+## Sobre
+
+Repositório de treino do curso Claude Code na Prática.
