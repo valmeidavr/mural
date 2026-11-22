@@ -7,3 +7,7 @@ a gente usa ele pra conhecer o Claude Code antes de construir o portal de verdad
 npm start    # abre o mural em http://localhost:5500
 npm test     # roda os testes
 ```
+
+## Hooks
+
+O `.claude/hooks/registrar.mjs` anota no `.claude/hooks.log` cada arquivo que o Claude edita.
