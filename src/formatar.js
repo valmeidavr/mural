@@ -37,8 +37,8 @@ export function textoContagem(quantidade) {
   return `${quantidade} ${quantidade === 1 ? "notícia" : "notícias"}`;
 }
 
-/** Estima os minutos de leitura (200 palavras por minuto, no mínimo 1). */
-export function tempoDeLeitura(texto, palavrasPorMinuto = 200) {
+/** Estima os minutos de leitura (150 palavras por minuto, no mínimo 1). */
+export function tempoDeLeitura(texto, palavrasPorMinuto = 150) {
   const palavras = texto.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(palavras / palavrasPorMinuto));
 }

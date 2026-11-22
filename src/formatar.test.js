@@ -49,6 +49,6 @@ test("deve remover a pontuação no slugify", () => {
 test("tempoDeLeitura arredonda pra cima e tem mínimo de 1 minuto", () => {
   assert.equal(tempoDeLeitura(""), 1);
   assert.equal(tempoDeLeitura("poucas palavras aqui"), 1);
-  assert.equal(tempoDeLeitura("palavra ".repeat(200)), 1);
-  assert.equal(tempoDeLeitura("palavra ".repeat(201)), 2);
+  assert.equal(tempoDeLeitura("palavra ".repeat(150)), 1);
+  assert.equal(tempoDeLeitura("palavra ".repeat(151)), 2);
 });
